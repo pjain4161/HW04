@@ -13,8 +13,11 @@
 # Body
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """This function just checks the first character of the string. 
+    If the first character is in lowercase, it returns true, else it returns False. 
+    It does not check rest of the letters of the string because 
+    'return' keyword is used which makes the control to jump of the for loop at the first iteration itself.
+        """
     for c in s:
         if c.islower():
             return True
@@ -22,7 +25,10 @@ def any_lowercase1(s):
             return False
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """This function just checks the if the particular letter 'c' is in lowercase or not. 
+    It will always return true as the letter 'c' is in lowercase. 
+    The control will exit from the for loop at the first iteration and print True 
+    without checking the actual letters of the string.
     """
     for c in s:
         if 'c'.islower():
@@ -31,14 +37,20 @@ def any_lowercase2(s):
             return 'False'
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """This function checks the if the letters in the string are in lowercase or not 
+    but returns the result of the LAST letter only.  
+    If the last character is in lowercase, it returns true, else it returns False. 
+    It does not take into consideration if all the PREVIOUS letters are in lowercase.
     """
     for c in s:
         flag = c.islower()
     return flag
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
+    """This function will return True if any of the letters in the string are in lowercase.
+    If all the letters in the string are in upercase, only then it will return False. 
+    This function sets flag variable to False. If even one letter in the string is in lowercase, 
+    the flag will be set to True and the function will value as True.
     """
     flag = False
     for c in s:
@@ -46,7 +58,7 @@ def any_lowercase4(s):
     return flag
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """This function works fine.
     """
     for c in s:
         if not c.islower():
@@ -60,7 +72,12 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    print any_lowercase1('bAnAna')
+    print any_lowercase2('CHIpotle')
+    print any_lowercase3('BANANa')
+    print any_lowercase4('bAnAna')
+    
+    
     
 
 if __name__ == '__main__':

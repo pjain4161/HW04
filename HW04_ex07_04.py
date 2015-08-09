@@ -21,17 +21,36 @@
 
 ################################################################################
 # Imports
+import math
+import sys
 
 
 # Body
+def eval_loop():
+    val2 = ""
+     
+    try:
+        while(True):
+            val = raw_input("enter string to be evaluated or enter \"done\"  ")
+            val = str(val)
+            
+            if (val == "done") or (val == "Done") or (val == "DONE"):
+                if (val2 != ""):
+                    print "last evaluated result = " + str(val2)
+                return False
+            else:
+                val2 = eval(val)
+                print val2
+            
+    except:
+        print "You have entered a wrong expression. Please input only math expressions"
 
 
 
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
     
 
 if __name__ == '__main__':
