@@ -43,7 +43,7 @@ def eval_loop():
                 print val2
             
     except:
-        print "You have entered a wrong expression. Please input only math expressions"
+        print "You have entered a wrong expression."
 
 
 
